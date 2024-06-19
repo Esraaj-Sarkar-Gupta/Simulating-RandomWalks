@@ -55,5 +55,5 @@ print("> Histogram plotted")
 sum = 0
 for m in Pos:
     sum = sum + m
-print(f"> Sum of all positions, mean = {sum}.")
+print(f"> Mean position = {sum/NOE}.")
 print('> End')
