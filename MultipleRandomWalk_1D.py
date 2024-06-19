@@ -1,4 +1,4 @@
-print("> Simulating random walks for multiple independent variables. ")
+print("> Simulating random walks for multiple independent variables in one dimension.")
 import numpy as np
 import matplotlib.pyplot as plt
 import time as t
