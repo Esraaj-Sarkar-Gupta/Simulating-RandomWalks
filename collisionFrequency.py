@@ -15,7 +15,7 @@ else:
     print('> All collisions at instance 1 will be ignored')
     rem1 = True
 # remove all collisions at instance 1
-# >90% of collisions occur at time 1, which makes the rest of the histogram unreadable due to the skewed scale
+# approximately 90% of collisions occur at time 1, which makes the rest of the histogram unreadable due to the skewed scale
 
 with open('logs.txt' , 'r') as file: # pull logs file
     logstxt = file.read()
@@ -26,16 +26,20 @@ for str in log_lines:
         data.append(str.split(' ')[10]) # aquiring appropriate data from each line
     except:
         pass
+rData = data 
 if rem1 == True: # removing all instances of collision at 1
     data = [num for num in data if num != '1']
     print("[O] All instances of collisions at time instance 1 have been removed")
+    print(f"[O] {len(data) / len(rData) * 100 :.2f}% data points remain")
     msg = '[All collisions at instance 1 have been removed]'
 print("> Data extracted from logs.txt file")
-print(f"> Total data points: {len(data)}")  
+print(f"> Plotted data points: {len(data)}")  
+print(f'> Total data points: {len(rData)}')
 plt.figure()
 plt.hist(data , 50)
 plt.xlabel("Time Instance of Collision")
 plt.ylabel("Number of Collisions")
 plt.title(f"Frequency of collisions in a random walk as elements diffuse over time.\n{msg}")
 print("> Data plotted")
+    
     
