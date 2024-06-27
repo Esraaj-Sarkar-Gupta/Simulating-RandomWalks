@@ -38,6 +38,7 @@ plt.scatter(0 , 0 , color = 'red')
 plt.xlabel = 'X Space'
 plt.ylabel = 'Y Space'
 plt.title(f"Path traveled by partical after {n} moves")
+plt.show()
 print("> Plotted scatter points")
 print("> End")
 
