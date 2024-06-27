@@ -40,6 +40,7 @@ plt.hist(data , 50)
 plt.xlabel("Time Instance of Collision")
 plt.ylabel("Number of Collisions")
 plt.title(f"Frequency of collisions in a random walk as elements diffuse over time.\n{msg}")
+plt.show()
 print("> Data plotted")
     
     
