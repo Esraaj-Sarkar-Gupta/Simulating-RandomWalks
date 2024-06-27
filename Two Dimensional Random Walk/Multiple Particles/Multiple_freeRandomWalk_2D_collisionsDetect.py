@@ -79,6 +79,7 @@ plt.ylabel("Y Space")
 for i in range(0  , len(Ex)):
     plt.plot(Ex[i] , Why[i] , linewidth =  2) # connecting lines for each partical
     plt.scatter(Ex[i] , Why[i] , c = scalar_field , cmap = cmap , norm = norm , s = 40) # mapped points for every partical 
+plt.show()
 print("> Finished plotting random walk map")
 with open(logfile , 'w') as logfile:
     for msg in logs:
